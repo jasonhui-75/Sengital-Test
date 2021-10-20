@@ -13,45 +13,45 @@ function App() {
     setFsize(n)
     console.log("changed to"+ fsize)
   }
-  let fontMIcon = <AiOutlineFontColors size={20} style={{paddingTop:"1px"}}/>;
-  let fontSIcon = <BiIcons.BiFont size={16} />;
-  let fontLIcon = <BiIcons.BiFont size={24}/>;
+  let fontMIcon = <AiOutlineFontColors size={18} style={{paddingTop:"1px"}}/>;
+  let fontSIcon = <BiIcons.BiFont size={12} />;
+  let fontLIcon = <BiIcons.BiFont size={20}/>;
   if(fsize===100)
   {
-    fontMIcon = <AiOutlineFontColors size={20} style={{paddingTop:"1px"}}/>;
-    fontSIcon = <BiIcons.BiFont size={16} />;
-    fontLIcon = <BiIcons.BiFont size={24}/>;
+    fontMIcon = <AiOutlineFontColors size={18} style={{paddingTop:"1px"}}/>;
+    fontSIcon = <BiIcons.BiFont size={12} />;
+    fontLIcon = <BiIcons.BiFont size={20}/>;
   }
   else if(fsize ===90){
-    fontSIcon = <AiOutlineFontColors size={16} style={{paddingTop:"1px"}}/>;
-    fontMIcon = <BiIcons.BiFont size={20}/>;
-    fontLIcon = <BiIcons.BiFont size={24}/>;
+    fontSIcon = <AiOutlineFontColors size={14} style={{paddingTop:"1px"}}/>;
+    fontMIcon = <BiIcons.BiFont size={16}/>;
+    fontLIcon = <BiIcons.BiFont size={20}/>;
   }
   else if(fsize ===110){
-    fontLIcon = <AiOutlineFontColors size={24} style={{paddingTop:"1px"}}/>;
-    fontMIcon = <BiIcons.BiFont size={20}/>;
-    fontSIcon = <BiIcons.BiFont size={16}/>;
+    fontLIcon = <AiOutlineFontColors size={22} style={{paddingTop:"1px"}}/>;
+    fontMIcon = <BiIcons.BiFont size={16}/>;
+    fontSIcon = <BiIcons.BiFont size={12}/>;
   }
   return (
     < >
       <header className="App-header">
         <ul>
           <li id="iconli" style={{float:"left"}}>
-                <a href="/" style={{padding: "0px 0px"}}><img id="icon" src="https://www.lcsd.gov.hk/en/artist/common/graphics/logo/logo_tc.gif" alt="Italian Trulli"/></a>
+                <a href="/" style={{padding: "0px 0px", }}><img id="icon" src="https://www.lcsd.gov.hk/en/artist/common/graphics/logo/logo_tc.gif" alt="Italian Trulli" width="80%"/></a>
           </li>
-          <li id="str1" className="lislash">|</li>
+          <li id="str1" className="lislash" >|</li>
           <li className="licon">
-            <button id="b3" class="btn shadow-none" onClick={()=>changeSize(110)} style={{paddingTop:"30px"}}>
+            <button id="b3" class="btn shadow-none" onClick={()=>changeSize(110)} style={{paddingTop:"18px"}}>
               {fontLIcon}
             </button>
           </li>
           <li className="licon">
-            <button id="b2" class="btn shadow-none" onClick={()=>changeSize(100)} style={{paddingTop:"31px"}}>
+            <button id="b2" class="btn shadow-none" onClick={()=>changeSize(100)} style={{paddingTop:"19px"}}>
               {fontMIcon}
             </button>
           </li>
           <li className="licon">
-            <button id="b1" class="btn shadow-none" onClick={()=>changeSize(90)} style={{paddingTop:"32px"}}>
+            <button id="b1" class="btn shadow-none" onClick={()=>changeSize(90)} style={{paddingTop:"20px"}}>
               {fontSIcon}
             </button>
           </li>

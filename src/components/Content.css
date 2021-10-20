@@ -3,8 +3,8 @@
   padding: 1rem;
   /* padding-left: 4rem; */
   /* margin-right: 0; */
-  padding-left: 3rem;
-  padding-top: 6rem;
+  padding-left: 5rem;
+  padding-top: 5rem;
   width: 90%;
 }
 .myb {
@@ -32,7 +32,7 @@
   margin-top: 1rem;
 }
 .br {
-  height: 4rem;
+  height: 36px;
   width: 100%px;
 }
 .ci {
@@ -166,14 +166,19 @@ footer span a {
 footer p {
   padding: 14px 16px;
 }
+footer,
+.mycontainer,
+h6 {
+  font-size: 13px !important;
+}
 @media (min-width: 768px) {
   .container {
-    max-width: 100% !important;
+    max-width: 85% !important;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 100% !important;
+    max-width: 85% !important;
   }
 }

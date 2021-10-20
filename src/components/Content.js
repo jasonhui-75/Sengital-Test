@@ -14,7 +14,7 @@ function Content(props) {
     const[s1menu, setS1menu] = useState(true);
     const[s2menu, setS2menu] = useState(true);
     const[allSubMenu, setAllSubMenu] = useState(0);
-    const[height, setHeight] = useState(75);
+    const[height, setHeight] = useState(60);
     const[ptitle,setPtitle] = useState("莘莘入場：學校文化日計劃");
     function show (n) {
         setOption(n)
@@ -46,9 +46,9 @@ function Content(props) {
         console.log(tab);
     };
     function cMmenu (){
-        console.log("mmenu");
+        //console.log("mmenu");
         setMmenu(!mmenu);
-        console.log(mmenu);
+       
     } 
     let subMenuStyle = { display:"none"};
     let mainMenuStyle = {color: "#50504f"};
@@ -76,25 +76,25 @@ function Content(props) {
     let s1MenuIcon =<MdIcons.MdArrowRight className="menuicon"/>;
     let s1MenuStyle = { display:"none"};
     function cS0Menu (){
-        console.log("cs0 - s0: "+s0menu+", s2: "+s2menu);
+        //console.log("cs0 - s0: "+s0menu+", s2: "+s2menu);
         setS0menu(prevS0menu => !prevS0menu);
         if( s0menu === true ){
-            console.log("added height s0");
+            //console.log("added height s0");
             setHeight(prevHeight=> prevHeight+8);
         }
         else{
-            console.log("removed height s0");
+            //console.log("removed height s0");
             setHeight(prevHeight=> prevHeight-8);
         }
     }
     function cS2Menu (){
         setS2menu(prevS2menu => !prevS2menu);
         if( s2menu === true ){
-            console.log("added height s2");
+            //console.log("added height s2");
             setHeight(prevHeight=> prevHeight+8);
         }
         else{
-            console.log("removed height s2");
+            // console.log("removed height s2");
             setHeight(prevHeight=> prevHeight-8);
         }
         
@@ -102,11 +102,11 @@ function Content(props) {
     function cS1Menu (){
         setS1menu(prevS1menu => !prevS1menu);
          if(s1menu === true){
-            console.log("added height s1");
+            //console.log("added height s1");
             setHeight(prevHeight=> prevHeight+20);
         }
         else{
-            console.log("removed height s1");
+            //console.log("removed height s1");
             setHeight(prevHeight=> prevHeight-20);
         }
     }
@@ -171,7 +171,7 @@ function Content(props) {
         <>
             <Container className="mycontainer " style= {{height: height+"rem"}}>
                 <Row>
-                    <h6>主頁 > {ptitle} </h6>
+                    <h6>主頁 > <strong>{ptitle}</strong> </h6>
                 </Row>
                 <Row className="br" style={{marginRight:"0", width:"100%"}}>
                     <Col className="bc">
@@ -301,7 +301,7 @@ function Content(props) {
                         <nav class="animated bounceInDown">
                                 <ul>
                                     <li id="eventBarTitle">
-                                        <a href="#">活動分類</a>
+                                        <a href="#">節目詳情</a>
                                     </li>
                                     <li class="sub-menu">
                                         <a href="#" onClick={()=>cMmenu()} style={mainMenuStyle}>
